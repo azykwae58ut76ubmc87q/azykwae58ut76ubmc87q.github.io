@@ -1,0 +1,7 @@
+- name: サイクリング
+  percentage: 70
+  color: info
+
+- name: ヨガ
+  percentage: 30
+  color: success

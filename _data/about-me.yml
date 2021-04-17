@@ -1,0 +1,15 @@
+- name: ピアノ
+  percentage: 90
+  color: danger
+
+- name: ヴォーカル
+  percentage: 90
+  color: primary
+
+- name: 出演
+  percentage: 30
+  color: info
+
+- name: 睡眠
+  percentage: 30
+  color: dark

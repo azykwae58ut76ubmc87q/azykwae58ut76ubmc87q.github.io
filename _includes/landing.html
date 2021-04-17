@@ -1,0 +1,36 @@
+<div class="row justify-content-center align-items-center p-4">
+  <div class="col-lg-4 col-md-6 text-center mt-4">
+
+    <!-- Fine Circle Responsive Image -->
+    <div id="container" class="my-2">
+      <div id="dummy"></div>
+      <div id="element">
+        <img src="{{ site.author.image }}" alt="{{ site.title }}" class="circle-image wow animated zoomIn" data-wow-delay=".1s">
+      </div>
+    </div>
+    <p class="text-muted wow animated slideInUp" data-wow-delay=".15s">{{ site.description }}</p>
+ </div>
+</div>
+
+<div class="col text-center mt-5 mb-5 pt-3 pb-3" style="outline:1px solid #eeee">
+<button type="button" class="btn btn-primary btn-block">最新情報</button>
+  {% for post in site.posts limit:1 %}
+  <a href="{{ post.url }}" class="btn btn-outline-primary btn-block" role="button"><div style="color:orange;font-weight:bold;">:zap:new:bell:</div> &emsp;{{ post.date |date: "%Y年%m月%d日"}}<br>{{ post.title }}</a>
+  {% endfor %}
+{% for post in site.posts offset:1 limit:2 %}
+    <a href="{{ post.url }}" class="btn btn-outline-primary btn-block" role="button">{{ post.date |date: "%Y年%m月%d日"}}<br>{{ post.title }}</a>
+{% endfor %}
+</div>
+
+<div id="btn-top" class="col text-center mt-5 mb-5 pt-3 pb-3 pr-3 pl-3" style="outline:1px solid #eeee">
+{% include elements/button.html link="https://j20gnup1kn.github.io/about/" text="プロフィール" style ="outline-primary" size="lg" %}
+
+{% include elements/button.html link="https://j20gnup1kn.github.io/news/" text="出演情報/お知らせ" style="outline-primary" size="lg" %}
+
+{% include elements/button.html link="https://j20gnup1kn.github.io/projects/" text="ディスコグラフィ" style="outline-primary" size="lg"%}
+
+{% include elements/button.html link="https://j20gnup1kn.github.io/lesson/" text="レッスンのご案内" style="outline-primary" size="lg" %}
+
+{% include elements/button.html link="https://j20gnup1kn.github.io/contact/" text="出演依頼/お問い合わせ" style="outline-primary" size="lg" %}
+</div>
+
